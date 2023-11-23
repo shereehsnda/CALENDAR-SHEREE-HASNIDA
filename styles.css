@@ -1,0 +1,76 @@
+body {
+  font-family: 'Lucida Handwriting', cursive;
+  background-color: #ffc0cb;
+  margin:0;
+  padding: 0;
+}
+
+.calendar-container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff; 
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  color: #ff69b4; 
+  margin-top: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+      border: 3px solid #ddd;
+      padding: 20px;
+      text-align: center;
+    }
+
+table th {
+  background-color: #FF447E;
+  font-weight: bold;
+}
+
+td.birthday,
+td.holiday {
+  position: relative;
+}
+
+td.birthday img,
+td.holiday img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 5px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+td.birthday img {
+  border: 2px solid #ff69b4; 
+}
+
+td.holiday img {
+  border: 2px solid #4682b4; 
+}
+
+td.birthday:hover::before, 
+td.holiday:hover::before {
+  content: attr(title);
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
